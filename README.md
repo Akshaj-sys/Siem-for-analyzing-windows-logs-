@@ -8,19 +8,19 @@ This project demonstrates practical experience in log ingestion, parsing, search
 
 ## Skills Learned
 
-Practical deployment of Splunk Enterprise and Universal Forwarder
+* Practical deployment of Splunk Enterprise and Universal Forwarder
 
-Configuration of log forwarding using inputs.conf and outputs.conf
+* Configuration of log forwarding using inputs.conf and outputs.conf
 
-Creation and management of custom Splunk indexes
+* Creation and management of custom Splunk indexes
 
-Troubleshooting field extraction and parsing issues
+* Troubleshooting field extraction and parsing issues
 
-Writing SPL queries for aggregation and visualisation
+* Writing SPL queries for aggregation and visualisation
 
-Building operational dashboards for log monitoring
+* Building operational dashboards for log monitoring
 
-Basic detection engineering using Windows Event Codes
+* Basic detection engineering using Windows Event Codes
 
 ## Tools Used
 
@@ -73,31 +73,42 @@ server = localhost:9997
 ```
 ## Key SPL Queries Used
 ### Total Errors
-` index=windows_logs EventCode=1000 | stats count `
+``` bash
+index=windows_logs EventCode=1000 | stats count
+```
 
 ### Top Event Codes
-` index=windows_logs | stats count by EventCode `
+``` bash
+index=windows_logs | stats count by EventCode
+```
 
 ### Events by Host
-` index=windows_logs | stats count by ComputerName `
+``` bash
+index=windows_logs | stats count by ComputerName
+```
 
 ### Top Accounts Observed
-` index=windows_logs | stats count by Account_Name `
+``` bash
+index=windows_logs | stats count by Account_Name
+```
 
 ### Event Volume Over Time
-` index=windows_logs | timechart count `
+``` bash
+index=windows_logs | timechart count
+```
 
 ## Troubleshooting Highlights
 
 * Identified missing field aggregation due to incorrect field names.
+
 * Used ` fieldsummary ` to validate searchable fields.
+  
 * Resolved index visibility issues caused by incomplete configuration.
+  
 * Managed Splunk license transition from Enterprise Trial to Free Mode.
+
 * Validated forwarder health using splunk.exe CLI.
 
----
 
-Outcome
-
-Successfully built a functional Windows log ingestion pipeline using Splunk, created operational dashboards, and validated end-to-end SIEM functionality in a lab environment.
-
+## Outcome
+Successfully built a functional Windows log ingestion pipeline using Splunk, created operational dashboards, and validated end-to-end SIEM functionality in a lab environment
