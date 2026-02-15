@@ -97,6 +97,10 @@ index=windows_logs | stats count by Account_Name
 index=windows_logs | timechart count
 ```
 
+## Dashboard Panels
+<img width="1919" height="921" alt="Screenshot 2026-02-11 222848" src="https://github.com/user-attachments/assets/59a3c6fb-8f6c-43c4-bc93-b9562cde8580" />
+
+
 ## Troubleshooting Highlights
 
 * Identified missing field aggregation due to incorrect field names.
