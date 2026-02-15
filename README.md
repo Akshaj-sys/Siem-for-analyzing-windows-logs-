@@ -100,6 +100,8 @@ index=windows_logs | timechart count
 ## Dashboard Panels
 <img width="1919" height="921" alt="Screenshot 2026-02-11 222848" src="https://github.com/user-attachments/assets/59a3c6fb-8f6c-43c4-bc93-b9562cde8580" />
 
+<img width="1919" height="928" alt="Screenshot 2026-02-11 223823" src="https://github.com/user-attachments/assets/47b32d99-c714-42ac-b2a3-d1e3b3e2e5b1" />
+
 
 ## Troubleshooting Highlights
 
